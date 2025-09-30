@@ -18,12 +18,23 @@ Perfect for projects that need quick and reliable input checks without pulling i
 
 ## 📋 Requirements
 - PHP 8.4 or higher
+- OR Docker & Docker Compose (recommended for development)
 
 ---
 
 ## 📦 Installation
+
+### Via Composer
 ```bash
 composer require knatas/thingyvalidator
+```
+
+### Development with Docker
+```bash
+git clone https://github.com/knatas/thingyValidator.git
+cd thingyValidator
+docker-compose up -d
+docker-compose exec thingyvalidator composer install
 ```
 
 ---

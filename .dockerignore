@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+CLAUDE.md
+.claude/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Vendor (will be installed in container)
+vendor/
+
+# Composer lock (optional - remove if you want to lock versions)
+# composer.lock
+
+# Test artifacts
+.phpunit.result.cache
+coverage/

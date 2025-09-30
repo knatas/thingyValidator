@@ -21,17 +21,32 @@ composer.json         # Composer package configuration
 
 ## Development Commands
 
-Since this is a PHP project using Composer and PHPUnit:
-
-### Setup
+### Local Development (requires PHP 8.4+)
 ```bash
 composer install
+vendor/bin/phpunit tests/
+composer validate
 ```
 
-### Testing
+### Docker Development (recommended)
 ```bash
-vendor/bin/phpunit tests/
-vendor/bin/phpunit tests/ValidatorTest.php  # Run specific test file
+# Build and start development environment
+docker-compose up -d
+
+# Run commands in container
+docker-compose exec thingyvalidator composer install
+docker-compose exec thingyvalidator vendor/bin/phpunit tests/
+docker-compose exec thingyvalidator php -f examples/demo.php
+
+# Interactive PHP shell
+docker-compose exec thingyvalidator php -a
+
+# Start web server for examples (optional)
+docker-compose --profile web up -d
+# Access at http://localhost:8080
+
+# Stop all services
+docker-compose down
 ```
 
 ### Code Quality

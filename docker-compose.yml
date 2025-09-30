@@ -1,0 +1,41 @@
+services:
+  thingyvalidator:
+    build: .
+    container_name: thingyvalidator-dev
+    volumes:
+      - .:/app
+      - composer-cache:/home/www-data/.composer
+    working_dir: /app
+    command: tail -f /dev/null  # Keep container running
+    environment:
+      - PHP_IDE_CONFIG=serverName=thingyvalidator
+    networks:
+      - thingyvalidator-network
+
+  # PHP development server (for potential demo/testing web interface)
+  web:
+    build: .
+    container_name: thingyvalidator-web
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - composer-cache:/home/www-data/.composer
+    working_dir: /app
+    command: php -S 0.0.0.0:8080 -t /app/examples
+    environment:
+      - PHP_IDE_CONFIG=serverName=thingyvalidator-web
+    depends_on:
+      - thingyvalidator
+    networks:
+      - thingyvalidator-network
+    profiles:
+      - web
+
+volumes:
+  composer-cache:
+    driver: local
+
+networks:
+  thingyvalidator-network:
+    driver: bridge
