@@ -2,7 +2,7 @@
 
 !!! WORK IN PROGRESS !!!
 
-A simple, dependency-free validation library for PHP.  
+A simple, dependency-free validation library for PHP 8.4+.  
 Perfect for projects that need quick and reliable input checks without pulling in heavy frameworks.
 
 🚀 **Hacktoberfest-friendly**: this project is open to contributions! Add new validators, improve tests, or enhance documentation.  
@@ -15,6 +15,9 @@ Perfect for projects that need quick and reliable input checks without pulling i
 - Easy to extend with custom rules
 - Tested with PHPUnit
 - Clear and simple API
+
+## 📋 Requirements
+- PHP 8.4 or higher
 
 ---
 
@@ -95,7 +98,10 @@ composer.json
 ---
 
 ## ⚖️ License
-MIT License. See [LICENSE](LICENSE) for details.
+MIT License - open source software distributed without any warranties or guarantees.  
+Use at your own risk and responsibility.
+
+See [LICENSE](LICENSE) file for complete license terms.
 
 ---
 
