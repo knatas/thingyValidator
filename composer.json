@@ -1,0 +1,40 @@
+{
+    "name": "knatas/thingyvalidator",
+    "description": "A simple, dependency-free validation library for PHP 8.4+",
+    "type": "library",
+    "keywords": ["validation", "validator", "php", "email", "phone", "url", "iban"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "knatas",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThingyValidator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ThingyValidator\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-html coverage",
+        "validate": "composer validate --strict"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

@@ -3,10 +3,10 @@
 ## Phase 1: Core Infrastructure (Priority: Critical)
 
 ### 1.1 Project Setup
-- [ ] Create `composer.json` with PHP 8.4+ requirement and PSR-4 autoloading
-- [ ] Create `phpunit.xml` configuration for testing
-- [ ] Create basic directory structure (`src/`, `tests/`)
-- [ ] Add `.gitignore` for PHP projects
+- [x] Create `composer.json` with PHP 8.4+ requirement and PSR-4 autoloading
+- [x] Create `phpunit.xml` configuration for testing
+- [x] Create basic directory structure (`src/`, `tests/`)
+- [x] Add `.gitignore` for PHP projects
 
 ### 1.2 Core Architecture Implementation
 - [ ] Create `ValidatorInterface` with `validate()` and `getName()` methods
