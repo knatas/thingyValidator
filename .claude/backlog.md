@@ -56,10 +56,10 @@
 - [x] Add code coverage configuration
 
 ### 3.2 Core Tests
-- [ ] Write tests for `ValidationResult` class
-- [ ] Write tests for `ValidatorRegistry` registration/retrieval
-- [ ] Write tests for main `Validator` class facade methods
-- [ ] Write tests for `ValidationContext` functionality
+- [x] Write tests for `ValidationResult` class
+- [x] Write tests for `ValidatorRegistry` registration/retrieval
+- [x] Write tests for main `Validator` class facade methods
+- [x] Write tests for `ValidationContext` functionality
 
 ### 3.3 Validator Tests
 - [ ] Create comprehensive test suite for `EmailValidator`
