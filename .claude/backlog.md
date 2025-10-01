@@ -37,9 +37,9 @@
 - [x] `FloatValidator` - Floating point validation with precision
 
 ### 2.3 Format Validators
-- [ ] `PhoneValidator` - International phone number formats
-- [ ] `IbanValidator` - International Bank Account Number validation
-- [ ] `UuidValidator` - UUID format validation (v4)
+- [x] `PhoneValidator` - International phone number formats
+- [x] `IbanValidator` - International Bank Account Number validation
+- [x] `UuidValidator` - UUID format validation (v4)
 
 ### 2.4 Convenience Methods
 - [ ] Add `isEmail()`, `isUrl()`, `isPhone()` methods to main Validator class
