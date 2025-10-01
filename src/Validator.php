@@ -43,10 +43,53 @@ class Validator
      * Create a new Validator instance
      *
      * @param ValidatorRegistry|null $registry Optional custom registry instance
+     * @param bool $autoRegister Auto-register built-in validators (default: true)
      */
-    public function __construct(?ValidatorRegistry $registry = null)
+    public function __construct(?ValidatorRegistry $registry = null, bool $autoRegister = true)
     {
         $this->registry = $registry ?? ValidatorRegistry::getInstance();
+
+        if ($autoRegister) {
+            $this->registerBuiltInValidators();
+        }
+    }
+
+    /**
+     * Register all built-in validators
+     *
+     * This method auto-registers the standard validators so convenience
+     * methods work out of the box. Can be disabled via constructor.
+     * Only registers validators that exist (class_exists check).
+     *
+     * @return void
+     */
+    private function registerBuiltInValidators(): void
+    {
+        // Map of validator names to class names
+        // Only registers if class exists (supports partial implementations)
+        $validatorsToRegister = [
+            'email' => \ThingyValidator\Validators\EmailValidator::class,
+            'url' => \ThingyValidator\Validators\UrlValidator::class,
+            'phone' => \ThingyValidator\Validators\PhoneValidator::class,
+            'alpha' => \ThingyValidator\Validators\AlphaValidator::class,
+            'alphanumeric' => \ThingyValidator\Validators\AlphanumericValidator::class,
+            'length' => \ThingyValidator\Validators\LengthValidator::class,
+            'number' => \ThingyValidator\Validators\NumberValidator::class,
+            'integer' => \ThingyValidator\Validators\IntegerValidator::class,
+            'float' => \ThingyValidator\Validators\FloatValidator::class,
+            'iban' => \ThingyValidator\Validators\IbanValidator::class,
+            'uuid' => \ThingyValidator\Validators\UuidValidator::class,
+        ];
+
+        foreach ($validatorsToRegister as $name => $class) {
+            // Only register if:
+            // 1. Validator doesn't already exist in registry
+            // 2. Class file exists (supports gradual validator implementation)
+            if (!$this->registry->has($name) && class_exists($class)) {
+                $validator = new $class();
+                $this->registry->register($validator);
+            }
+        }
     }
 
     /**

@@ -42,10 +42,10 @@
 - [ ] `UuidValidator` - UUID format validation (v4)
 
 ### 2.4 Convenience Methods
-- [ ] Add `isEmail()`, `isUrl()`, `isPhone()` methods to main Validator class
-- [ ] Add `isNumber()`, `isAlpha()`, `isAlphanumeric()` methods
-- [ ] Add `isLength()`, `isIban()`, `isUuid()` methods
-- [ ] Ensure all convenience methods return boolean for backward compatibility
+- [x] Add `isEmail()`, `isUrl()`, `isPhone()` methods to main Validator class
+- [x] Add `isNumber()`, `isAlpha()`, `isAlphanumeric()` methods
+- [x] Add `isLength()`, `isIban()`, `isUuid()` methods
+- [x] Ensure all convenience methods return boolean for backward compatibility
 
 ## Phase 3: Testing Infrastructure (Priority: High)
 

@@ -91,7 +91,9 @@ class UrlValidator extends AbstractValidator
 
         // Validate protocol/scheme
         $scheme = strtolower($parts['scheme']);
-        $allowedProtocols = $context?->get('allowed_protocols', self::DEFAULT_ALLOWED_PROTOCOLS);
+        $allowedProtocols = $context !== null
+            ? $context->get('allowed_protocols', self::DEFAULT_ALLOWED_PROTOCOLS)
+            : self::DEFAULT_ALLOWED_PROTOCOLS;
 
         if (!in_array($scheme, $allowedProtocols, true)) {
             return $this->failure(
