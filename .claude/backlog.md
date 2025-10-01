@@ -62,12 +62,12 @@
 - [x] Write tests for `ValidationContext` functionality
 
 ### 3.3 Validator Tests
-- [ ] Create comprehensive test suite for `EmailValidator`
-- [ ] Create test suite for `UrlValidator` with edge cases
-- [ ] Create test suite for `PhoneValidator` with international formats
-- [ ] Create test suite for `LengthValidator` with boundary conditions
-- [ ] Create test suite for numeric validators
-- [ ] Create test suite for `IbanValidator` with real IBAN examples
+- [x] Create comprehensive test suite for `EmailValidator`
+- [x] Create test suite for `UrlValidator` with edge cases
+- [x] Create test suite for `PhoneValidator` with international formats
+- [x] Create test suite for `LengthValidator` with boundary conditions
+- [x] Create test suite for numeric validators
+- [x] Create test suite for `IbanValidator` with real IBAN examples
 - [ ] Add performance benchmarks for all validators
 
 ## Phase 4: Documentation & Package (Priority: Medium)
