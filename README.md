@@ -1,6 +1,5 @@
 # thingyValidator
 
-!!! WORK IN PROGRESS !!!
 
 A simple, dependency-free validation library for PHP 8.4+.  
 Perfect for projects that need quick and reliable input checks without pulling in heavy frameworks.
